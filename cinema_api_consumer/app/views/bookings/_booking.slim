@@ -1,0 +1,20 @@
+.card.stories-card
+  .stories-card__content.d-flex.align-items-center.flex-wrap
+    /.avatar.avatar-lg.mr-3
+      a[href=""]
+        img.avatar-img.rounded[src=@bookings["url"] alt="avatar" width="100" ]
+    .stories-card__title.flex
+      h5.card-title.m-0
+        a.headings-color[href=""]
+          = booking["user"]
+      small.text-dark-gray
+        = booking["showtime"]
+    .d-flex.align-items-center.flex-column.flex-sm-row.stories-card__meta
+      = link_to booking_path(booking['id']), class: 'mr-3 text-dark-gray text-uppercase stories-card__tag d-flex align-items-center pr-2', remote: true do
+        i.material-icons.text-muted-light.mr-1
+          | event_available
+        | Funciones
+    .dropdown.ml-auto
+      = link_to booking_path(booking['id']), class: 'text-muted pr-2', remote: true do
+        i.material-icons
+          | visibility

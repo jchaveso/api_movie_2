@@ -1,0 +1,9 @@
+= simple_form_for :booking, url: bookings_path do |f|
+  .form-group
+    = f.label :user_id
+    = f.text_field :user_id, class: 'form-control', label: false
+  .form-group
+    = f.label :showtime_id
+    = f.text_field :showtime_id, class: 'form-control', label: false
+  = button_tag(type: 'submit', name: 'deliver', class: "btn btn-alt-info mr-15") do
+    'Crear pelicula'

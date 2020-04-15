@@ -1,0 +1,15 @@
+= simple_form_for :user, url: movies_path do |f|
+  .form-group
+    = f.label :document
+    = f.text_field :document, class: 'form-control', label: false
+  .form-group
+    = f.label :full_name
+    = f.text_field :full_name, class: 'form-control', label: false
+  .form-group
+    = f.label :email
+    = f.text_field :email, class: 'form-control', label: false
+  .form-group
+    = f.label :mobile_phone
+    = f.text_field :mobile_phone, class: 'form-control', label: false
+  = button_tag(type: 'submit', name: 'deliver', class: "btn btn-alt-info mr-15") do
+    'Crear pelicula'

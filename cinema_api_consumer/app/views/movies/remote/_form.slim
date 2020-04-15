@@ -1,0 +1,11 @@
+#modal-show.modal.fade[tabindex="-1" role="dialog" aria-labelledby="#modal-show" aria-hidden="true"]
+  .modal-dialog.modal-dialog-centered.modal-sm
+    .modal-content
+      .modal-body.text-center.p-4
+        i.material-icons.icon-40pt.text-warning.mb-2
+          | local_movies
+        h4
+          | Nueva Pelicula!
+        = render 'movies/form'
+        button.btn.btn-warning.my-2[type="button" data-dismiss="modal"]
+          | Cerrar Modal

@@ -1,0 +1,14 @@
+.mdk-drawer-layout__content.page[style="transform: translate3d(0px, 0px, 0px);"]
+  .container-fluid.page__heading-container
+    .page__heading.d-flex.align-items-center
+      .flex
+        h1.m-0
+          | Reservas
+      = link_to 'Nueva Reserva', new_booking_path, remote: true, class: 'btn btn-success ml-3'
+  .container-fluid.page__container
+    .mb-3
+      strong.text-dark-gray
+        | Reservas
+    .stories-cards.mb-4
+      - @bookings.each do |movie|
+        = render 'bookings/booking', movie: movie
